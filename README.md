@@ -49,19 +49,15 @@ python3 -m pip install .
 
 ## Usages
 
-### Command line
-
 ```bash
 LinuxMemoryStatistics              # Using CLI package executable
 python3 -m LinuxMemoryStatistics   # Using python module
 python3 LinuxMemoryStatistics.pyz  # Using python executable
 LinuxMemoryStatistics.exe          # Using python Windows executable
-```
 
-### Python script
-
-```python
-from LinuxMemoryStatistics import *
+LinuxMemoryStatistics -d -o rss    # Details by protocol ordered by rss
+LinuxMemoryStatistics -e -o total  # Memory usages by executable (group all process for an executable) ordered by total (Private + Shared)
+LinuxMemoryStatistics -s -c        # Memory usages for system (like `free -h`) without colors
 ```
 
 ## Links
